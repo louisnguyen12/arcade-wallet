@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Splash from './components/splash';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      loading: true
+    }
+  }
+
+  componentDidMount() {
+    console.log('props',this.props)
+    setTimeout(() => {
+      this.setState({ loading: false })
+    }, 1500)
+  }
+
+  render() {
+    if (this.state.loading) {
+      return (
+        <Splash />
+      )
+    }
+    else {
+      return (
+        <div id="main">
+              <h1>Arcade Wallet</h1>
+              <button type="button" class="nes-btn is-primary" onClick={()=>this.props.history.push('/login')}>Login</button>
+              <button type="button" class="nes-btn is-success" onClick={()=>this.props.history.push('/createwallet')}>Create Wallet</button>
+              <button type="button" class="nes-btn is-warning" onClick={()=>this.props.history.push('/restorewallet')}>Restore Wallet</button>
+        </div>
+      )
+    }
+  }
 }
 
 export default App;
