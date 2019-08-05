@@ -50,7 +50,7 @@ class RestoreWallet extends Component {
         return (
             <div id="main">
 
-                <a onClick={() => this.props.history.push("")}><img style={{ imageRendering: 'pixelated' }} src={require('../img/house-black-silhouette-without-door.png')} /></a>
+                <a onClick={() => this.props.history.push("")}><img style={{ imageRendering: 'pixelated' }} src={require('../img/house-black-silhouette-without-door.png')} alt="Home" /></a>
 
                 <h2 className="restore">Restore Wallet</h2>
 

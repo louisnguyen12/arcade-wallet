@@ -14,7 +14,7 @@ class App extends Component {
     console.log('props',this.props)
     setTimeout(() => {
       this.setState({ loading: false })
-    }, 1500)
+    }, 2000)
   }
 
   render() {
@@ -30,6 +30,9 @@ class App extends Component {
               <button type="button" class="nes-btn is-primary" onClick={()=>this.props.history.push('/login')}>Login</button>
               <button type="button" class="nes-btn is-success" onClick={()=>this.props.history.push('/createwallet')}>Create Wallet</button>
               <button type="button" class="nes-btn is-warning" onClick={()=>this.props.history.push('/restorewallet')}>Restore Wallet</button>
+              <div className="myGit">
+                <a href="https://github.com/louisnguyen12"><i class="nes-icon github is-medium"></i></a>
+              </div>
         </div>
       )
     }

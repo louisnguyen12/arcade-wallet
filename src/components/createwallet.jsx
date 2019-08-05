@@ -56,7 +56,7 @@ class CreateWallet extends Component {
         return (
             <div id="main">
 
-                <a onClick={() => this.props.history.push("")}><img style={{ imageRendering: 'pixelated' }} src={require('../img/house-black-silhouette-without-door.png')} /></a>
+                <a onClick={() => this.props.history.push("")}><img alt="Home" style={{ imageRendering: 'pixelated' }} src={require('../img/house-black-silhouette-without-door.png')} /></a>
 
                 <h2 className="create">Create Wallet</h2>
                 <form onSubmit={this.handleSubmit}>

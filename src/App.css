@@ -65,6 +65,12 @@ body, html {
   top: 20px;
 }
 
+.myGit {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
 /* CreateWallet */
 .create {
   color: #36ee5e;
