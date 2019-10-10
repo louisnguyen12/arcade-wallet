@@ -11,9 +11,14 @@ class Dashboard extends Component {
 
     render() {
         return(
-            <div id="main">
+            <div id="dashboard">
                 <h2>Dashboard</h2>
-                
+                <div className="sidenav nes-container is-rounded">
+                    <p>bla bla</p>
+                </div>
+                <div className="mainnav nes-container">
+                    <p>bla bla</p>
+                </div>
             </div>
         )
     }
